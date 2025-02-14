@@ -1,1 +1,1 @@
-# Numerical-Analysis-Cubic-Splines-in-Pythonc-Interpolation
+# Numerical-Analysis-Cubic-Splines-in-Python

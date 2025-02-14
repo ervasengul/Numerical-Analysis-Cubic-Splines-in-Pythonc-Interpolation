@@ -1,0 +1,65 @@
+# Elevation Interpolation Script
+
+This Python script performs cubic spline interpolation on elevation data points and visualizes the resulting elevation curve. It uses NumPy for data handling and SciPy for the interpolation calculations.
+
+## Features
+
+- Cubic spline interpolation of elevation data
+- Calculation of elevation at specific distances
+- Visualization of both original data points and interpolated curve
+- Natural boundary conditions for smooth interpolation
+
+## Dependencies
+
+- NumPy
+- SciPy
+- Matplotlib
+
+## Installation
+
+```bash
+pip install numpy scipy matplotlib
+```
+
+## Usage
+
+1. Prepare your elevation data in two arrays:
+   - `x`: Distance values in kilometers
+   - `y`: Elevation values in meters
+
+2. Run the script to:
+   - Create a cubic spline interpolation
+   - Calculate elevation at specific points (e.g., 7.5 km in the example)
+   - Generate and display a visualization of the elevation curve
+
+## Example Data Format
+
+```python
+x = np.array([0, 5, 10, 15, 20])  # Distance in km
+y = np.array([100, 150, 120, 170, 130])  # Elevation in meters
+```
+
+## Output
+
+The script produces:
+1. A numerical output showing the interpolated elevation at 7.5 km
+2. A plot displaying:
+   - Original data points as markers
+   - Interpolated elevation curve
+   - Grid lines for better readability
+   - Properly labeled axes and legend
+
+## Technical Details
+
+- Uses natural boundary conditions (`bc_type='natural'`) for the cubic spline
+- Generates 250 points for smooth curve visualization
+- Plot dimensions are set to 10x6 inches for optimal viewing
+
+## Customization
+
+You can modify:
+- Input data points
+- Number of interpolation points (`np.linspace(0, 20, 250)`)
+- Plot appearance (figure size, colors, grid, etc.)
+- Interpolation points of interest (currently set to 7.5 km)
+
